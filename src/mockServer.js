@@ -6,7 +6,7 @@ function mockServer() {
             routes(){
                 this.urlPrefix= 'https://www.fakeapi.com';
                 this.namespace= '/v1/api';
-                this.timing= 3000 //mennyit kelljen várni az adatokra (ms-ban) 
+                this.timing= 3000;
 
                 this.get('/books', () => {
                     return [
@@ -19,7 +19,7 @@ function mockServer() {
         }
     );
 
-    return server
-}
+    return server;
+};
 
 export default mockServer
